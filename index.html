@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Salina Shrestha - Professional CV / Resume</title>
+  <meta name="description" content="Professional CV of Salina Shrestha - Operations, Customer Service, Airport Promotions & Administration Specialist in Siddhartha Chowk, Pokhara.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- html2pdf.js CDN for client-side PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Control / Action Bar (Excluded from PDF & Print) -->
+  <header class="action-bar no-print" id="action-bar">
+    <div class="action-bar-container">
+      <div class="action-brand">
+        <div class="brand-avatar">
+          <img src="profile.png" alt="Salina Shrestha" class="brand-avatar-img">
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Salina Shrestha</span>
+          <span class="brand-badge"><i class="fa-solid fa-circle-check"></i> Verified Profile</span>
+        </div>
+      </div>
+
+      <!-- Theme Palette Selector -->
+      <div class="theme-selector" title="Choose color accent">
+        <span class="theme-label"><i class="fa-solid fa-palette"></i> Style:</span>
+        <div class="color-options">
+          <button class="color-btn active" data-theme="navy" style="--btn-color: #1e3a8a;" title="Executive Navy" aria-label="Executive Navy Theme"></button>
+          <button class="color-btn" data-theme="emerald" style="--btn-color: #0f766e;" title="Emerald Slate" aria-label="Emerald Slate Theme"></button>
+          <button class="color-btn" data-theme="indigo" style="--btn-color: #4338ca;" title="Royal Indigo" aria-label="Royal Indigo Theme"></button>
+          <button class="color-btn" data-theme="burgundy" style="--btn-color: #881337;" title="Classic Burgundy" aria-label="Classic Burgundy Theme"></button>
+          <button class="color-btn" data-theme="slate" style="--btn-color: #1e293b;" title="Modern Charcoal" aria-label="Modern Charcoal Theme"></button>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button id="copy-contact-btn" class="btn btn-secondary" title="Copy Contact Details">
+          <i class="fa-regular fa-copy"></i>
+          <span>Copy</span>
+        </button>
+        <button id="print-btn" class="btn btn-secondary" title="Print CV">
+          <i class="fa-solid fa-print"></i>
+          <span>Print</span>
+        </button>
+        <!-- <button id="download-pdf-btn" class="btn btn-primary" title="Download High-Resolution PDF">
+          <i class="fa-solid fa-download"></i>
+          <span id="download-btn-text">Download PDF</span>
+        </button> -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Main CV Container -->
+  <main class="cv-wrapper">
+    <div class="cv-paper" id="cv-document">
+      
+      <!-- ================= HEADER SECTION ================= -->
+      <header class="cv-header">
+        <div class="header-main">
+          
+          <!-- Profile Photo Frame -->
+          <div class="profile-photo-wrapper">
+            <img src="profile.png" alt="Salina Shrestha" class="profile-photo" id="profile-photo-img">
+            <label for="photo-upload-input" class="photo-upload-overlay no-print" title="Click to Change Photo">
+              <i class="fa-solid fa-camera"></i>
+              <span>Change</span>
+            </label>
+            <input type="file" id="photo-upload-input" accept="image/*" style="display: none;">
+          </div>
+
+          <!-- Name & Title -->
+          <div class="name-block">
+            <h1 class="candidate-name">SALINA SHRESTHA</h1>
+            <div class="title-pill">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Promotions, Customer Service & Administration Specialist</span>
+            </div>
+          </div>
+          
+          <!-- Availability Stamps -->
+          <div class="header-stamp">
+            <span class="stamp-pill"><i class="fa-solid fa-location-dot"></i> Pokhara Based</span>
+            <span class="stamp-pill highlight"><i class="fa-solid fa-bolt"></i> Immediate Joiner</span>
+          </div>
+        </div>
+
+        <!-- Contact Quick Bar -->
+        <div class="contact-grid">
+          <a href="https://maps.google.com/?q=Siddhartha+Chowk,+Pokhara" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-text">
+              <span class="label">Location</span>
+              <span class="value">Siddhartha Chowk, Pokhara</span>
+            </div>
+          </a>
+
+          <a href="tel:+9779827124170" class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-text">
+              <span class="label">Phone / WhatsApp</span>
+              <span class="value">+977 9827124170</span>
+            </div>
+          </a>
+
+          <a href="mailto:salina_stha1823@hotmail.com" class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-text">
+              <span class="label">Email</span>
+              <span class="value">salina_stha1823@hotmail.com</span>
+            </div>
+          </a>
+        </div>
+      </header>
+
+      <!-- ================= PROFILE SUMMARY ================= -->
+      <section class="cv-section summary-section">
+        <div class="section-title-wrap">
+          <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+          <h2 class="section-title">Professional Profile</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="summary-card">
+          <p class="summary-text">
+            <strong>Dynamic, results-driven professional</strong> with extensive multi-sector experience across <strong>airport promotion, VIP customer service, corporate administration, and high-volume retail operations</strong> in both the <strong>UAE</strong> and <strong>Nepal</strong>. Proven ability to elevate client relationships, execute high-impact brand campaigns for premium global accounts, and optimize operational workflows with meticulous attention to detail and efficiency.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 2-COLUMN BODY LAYOUT ================= -->
+      <div class="cv-body-grid">
+        
+        <!-- LEFT COLUMN: EXPERIENCE & EDUCATION (63%) -->
+        <div class="cv-main-col">
+          
+          <!-- WORK EXPERIENCE -->
+          <section class="cv-section experience-section">
+            <div class="section-title-wrap">
+              <div class="section-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h2 class="section-title">Work Experience</h2>
+              <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+              
+              <!-- Job 1 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="job-card">
+                  <div class="job-header">
+                    <div class="job-role-group">
+                      <h3 class="job-title">Promoter</h3>
+                      <div class="job-company">
+                        <i class="fa-regular fa-building"></i>
+                        <span>Blue Gulf Events</span>
+                        <span class="dot-separator">•</span>
+                        <span class="location-tag"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+                      </div>
+                    </div>
+                    <span class="job-period"><i class="fa-regular fa-calendar"></i> 2019 – 2020</span>
+                  </div>
+                  <ul class="job-duties">
+                    <li>Represented high-profile luxury brands across Dubai International Airport (DXB) terminals, actively engaging international travelers to maximize product visibility.</li>
+                    <li>Delivered superior, culturally nuanced customer service, addressed passenger inquiries with poise, and consistently drove high sales conversions for active promotional campaigns.</li>
+                    <li>Liaised directly with airport terminal operations, brand representatives, and event managers to maintain pristine display standards and strict airport compliance.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Job 2 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="job-card">
+                  <div class="job-header">
+                    <div class="job-role-group">
+                      <h3 class="job-title">Administrator</h3>
+                      <div class="job-company">
+                        <i class="fa-regular fa-building"></i>
+                        <span>Time General Trading LLC</span>
+                        <span class="dot-separator">•</span>
+                        <span class="location-tag"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+                      </div>
+                    </div>
+                    <span class="job-period"><i class="fa-regular fa-calendar"></i> 2018 – 2019</span>
+                  </div>
+                  <ul class="job-duties">
+                    <li>Provided comprehensive administrative support to streamline day-to-day office operations and structured a universal digital and physical filing system.</li>
+                    <li>Coordinated executive schedules, stakeholder meetings, and comprehensive conference logistics.</li>
+                    <li>Liaised with the production department for finished goods dispatch and generated daily Goods Received Vouchers (GRV).</li>
+                    <li>Monitored stock inventory, managed office supply procurement, and resolved client inquiries promptly and professionally.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Job 3 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="job-card">
+                  <div class="job-header">
+                    <div class="job-role-group">
+                      <h3 class="job-title">Sales & Customer Service Associate</h3>
+                      <div class="job-company">
+                        <i class="fa-regular fa-building"></i>
+                        <span>Marquees Trading Company</span>
+                        <span class="dot-separator">•</span>
+                        <span class="location-tag"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+                      </div>
+                    </div>
+                    <span class="job-period"><i class="fa-regular fa-calendar"></i> 2017 – 2018</span>
+                  </div>
+                  <ul class="job-duties">
+                    <li>Managed front-counter customer service, device consultations, and retail sales for mobile handsets and accessories.</li>
+                    <li>Assisted customers with device issue intake for technical diagnostics, repair tracking, and communicated service turnaround status.</li>
+                    <li>Supervised Point of Sale (POS) billing, processed daily cash and electronic transactions, and maintained spare parts and product inventory.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- EDUCATION -->
+          <section class="cv-section education-section">
+            <div class="section-title-wrap">
+              <div class="section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h2 class="section-title">Education & Credentials</h2>
+              <div class="section-line"></div>
+            </div>
+
+            <div class="education-grid">
+              
+              <div class="edu-card">
+                <div class="edu-badge"><i class="fa-solid fa-award"></i> Degree</div>
+                <h3 class="edu-degree">Bachelor of Business Administration (BBA)</h3>
+                <div class="edu-institution">Nepal Tourism and Hotel Management College</div>
+                <div class="edu-location"><i class="fa-solid fa-location-dot"></i> Pokhara, Nepal</div>
+              </div>
+
+              <div class="edu-card">
+                <div class="edu-badge"><i class="fa-solid fa-book-open"></i> Higher Secondary</div>
+                <h3 class="edu-degree">Higher Secondary School</h3>
+                <div class="edu-institution">Sagarmatha Higher Secondary School</div>
+                <div class="edu-location"><i class="fa-solid fa-location-dot"></i> Pokhara, Nepal</div>
+              </div>
+
+              <div class="edu-card">
+                <div class="edu-badge"><i class="fa-solid fa-certificate"></i> School</div>
+                <h3 class="edu-degree">School Leaving Certificate (S.L.C.)</h3>
+                <div class="edu-institution">Nilgiri English Boarding School</div>
+                <div class="edu-location"><i class="fa-solid fa-location-dot"></i> Pokhara, Nepal</div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN: SKILLS, LANGUAGES, PERSONAL (37%) -->
+        <aside class="cv-sidebar-col">
+          
+          <!-- CORE COMPETENCIES -->
+          <section class="cv-section">
+            <div class="section-title-wrap">
+              <div class="section-icon"><i class="fa-solid fa-star"></i></div>
+              <h2 class="section-title">Core Skills</h2>
+              <div class="section-line"></div>
+            </div>
+
+            <!-- Category 1: Operational & Sales -->
+            <div class="skill-category">
+              <h4 class="skill-cat-title"><i class="fa-solid fa-chart-line"></i> Operational & Sales</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Customer Relationship (CRM)</span>
+                <span class="skill-tag">Airport & Event Promotion</span>
+                <span class="skill-tag">Retail Merchandising</span>
+                <span class="skill-tag">Inventory Control</span>
+                <span class="skill-tag">POS & Cash Handling</span>
+                <span class="skill-tag">Sales Conversion</span>
+              </div>
+            </div>
+
+            <!-- Category 2: Administrative -->
+            <div class="skill-category">
+              <h4 class="skill-cat-title"><i class="fa-solid fa-folder-tree"></i> Administrative</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Universal Filing Systems</span>
+                <span class="skill-tag">Documentation & Records</span>
+                <span class="skill-tag">Order & GRV Reconciliation</span>
+                <span class="skill-tag">Office & Meeting Coordination</span>
+                <span class="skill-tag">Procurement Support</span>
+              </div>
+            </div>
+
+            <!-- Category 3: Software & Tools -->
+            <div class="skill-category">
+              <h4 class="skill-cat-title"><i class="fa-solid fa-laptop-code"></i> Software & IT</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">MS Word</span>
+                <span class="skill-tag">MS Excel (Spreadsheets)</span>
+                <span class="skill-tag">MS PowerPoint</span>
+                <span class="skill-tag">Email & Web Applications</span>
+                <span class="skill-tag">POS Billing Systems</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- LANGUAGES -->
+          <section class="cv-section">
+            <div class="section-title-wrap">
+              <div class="section-icon"><i class="fa-solid fa-language"></i></div>
+              <h2 class="section-title">Languages</h2>
+              <div class="section-line"></div>
+            </div>
+
+            <div class="language-list">
+              <div class="lang-item">
+                <div class="lang-info">
+                  <span class="lang-name">English</span>
+                  <span class="lang-level">Fluent / Professional</span>
+                </div>
+                <div class="lang-bar">
+                  <div class="lang-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="lang-item">
+                <div class="lang-info">
+                  <span class="lang-name">Hindi</span>
+                  <span class="lang-level">Fluent / Conversational</span>
+                </div>
+                <div class="lang-bar">
+                  <div class="lang-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="lang-item">
+                <div class="lang-info">
+                  <span class="lang-name">Nepali</span>
+                  <span class="lang-level">Native Speaker</span>
+                </div>
+                <div class="lang-bar">
+                  <div class="lang-fill" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PERSONAL DETAILS -->
+          <section class="cv-section">
+            <div class="section-title-wrap">
+              <div class="section-icon"><i class="fa-solid fa-id-card"></i></div>
+              <h2 class="section-title">Personal Details</h2>
+              <div class="section-line"></div>
+            </div>
+
+            <div class="personal-card">
+              <div class="detail-row">
+                <span class="detail-key"><i class="fa-solid fa-flag"></i> Nationality:</span>
+                <span class="detail-val">Nepalese</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fa-solid fa-clock"></i> Availability:</span>
+                <span class="detail-val badge-status">Immediate Joiner</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fa-solid fa-map-pin"></i> Current City:</span>
+                <span class="detail-val">Pokhara</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- KEY ATTRIBUTES -->
+          <section class="cv-section">
+            <div class="section-title-wrap">
+              <div class="section-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+              <h2 class="section-title">Key Strengths</h2>
+              <div class="section-line"></div>
+            </div>
+
+            <ul class="strengths-list">
+              <li><i class="fa-solid fa-check"></i> Exceptional Cross-Cultural Communication</li>
+              <li><i class="fa-solid fa-check"></i> High-Stress Environment Adaptability</li>
+              <li><i class="fa-solid fa-check"></i> Punctual, Reliable & Detail-Oriented</li>
+              <li><i class="fa-solid fa-check"></i> Fast Learner for Enterprise Software</li>
+            </ul>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification element -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <i class="toast-icon fa-solid fa-circle-check"></i>
+    <span class="toast-message" id="toast-message">Action successful</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
